@@ -3,8 +3,7 @@
 //
 
 #include "Croix.h"
-#include "../exceptions/FormeException.h"
-#include <exception>
+#include "CroixException.h"
 
 
 Croix::Croix(double gauche, double haut, double droit, double bas) : _gauche(0), _haut(0), _droit(0), _bas(0) {
@@ -14,7 +13,7 @@ Croix::Croix(double gauche, double haut, double droit, double bas) : _gauche(0),
     setBas(bas);
 
     if ( _gauche > _droit || _bas < _haut )
-        throw FormeException("Impossible de créer une croix : côté gauche à droite du côté droit ou côté bas au dessus du côté haut");
+        throw CroixException("Impossible de créer une croix : côté gauche à droite du côté droit ou côté bas au dessus du côté haut");
 }
 
 Croix::~Croix() {

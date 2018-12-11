@@ -8,10 +8,11 @@
 #include <exception>
 #include <iostream>
 
+
 class FormeException : public std::exception {
 public:
     FormeException(const char* message);
-    const char* what() const throw();
+    virtual const char* what() const throw();
 
 private:
     std::string _message;

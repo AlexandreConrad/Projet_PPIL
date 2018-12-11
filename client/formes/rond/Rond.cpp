@@ -3,7 +3,8 @@
 //
 
 #include "Rond.h"
-#include "../exceptions/FormeException.h"
+#include "RondException.h"
+
 
 Rond::Rond(double xCentre, double yCentre, double rayon) {
     setXCentre(xCentre);
@@ -11,7 +12,7 @@ Rond::Rond(double xCentre, double yCentre, double rayon) {
     setRayon(rayon);
 
     if ( rayon < 0 )
-        throw FormeException("Impossible de créer un rond avec un rayon < 0");
+        throw RondException("Impossible de créer un rond avec un rayon < 0");
 }
 
 Rond::~Rond() {

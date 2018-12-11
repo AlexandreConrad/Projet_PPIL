@@ -4,6 +4,7 @@
 
 #include "FormeException.h"
 
+
 FormeException::FormeException(const char *message) : _message(message) {
 
 }
