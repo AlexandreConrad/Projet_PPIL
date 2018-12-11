@@ -3,7 +3,7 @@
 //
 
 #include "Croix.h"
-#include "FormeException.h"
+#include "../exceptions/FormeException.h"
 #include <exception>
 
 

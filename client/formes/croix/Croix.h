@@ -5,7 +5,7 @@
 #ifndef CLIENT_CROIX_H
 #define CLIENT_CROIX_H
 
-#include "Forme.h"
+#include "../Forme.h"
 
 
 class Croix : public Forme {

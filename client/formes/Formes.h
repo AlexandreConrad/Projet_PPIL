@@ -5,7 +5,7 @@
 #ifndef CLIENT_FORMES_H
 #define CLIENT_FORMES_H
 
-#include "Rond.h"
-#include "Croix.h"
+#include "rond/Rond.h"
+#include "croix/Croix.h"
 
 #endif //CLIENT_FORMES_H

@@ -3,7 +3,7 @@
 //
 
 #include "Rond.h"
-#include "FormeException.h"
+#include "../exceptions/FormeException.h"
 
 Rond::Rond(double xCentre, double yCentre, double rayon) {
     setXCentre(xCentre);

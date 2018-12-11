@@ -3,4 +3,4 @@ project(client)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(client main.cpp Forme.h Croix.cpp Croix.h Forme.cpp FormeException.cpp FormeException.h Rond.cpp Rond.h Formes.h)
+add_executable(client main.cpp formes/Forme.h formes/croix/Croix.cpp formes/croix/Croix.h formes/Forme.cpp formes/exceptions/FormeException.cpp formes/exceptions/FormeException.h formes/rond/Rond.cpp formes/rond/Rond.h formes/Formes.h)

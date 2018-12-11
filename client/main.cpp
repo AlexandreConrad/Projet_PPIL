@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Formes.h"
+#include "formes/Formes.h"
 
 
 int main() {
@@ -11,5 +11,5 @@ int main() {
     Forme* rond = new Rond(300, 300, 30);
     std::cout << *rond << std::endl;
 
-    return 0;
+    return EXIT_SUCCESS;
 }
