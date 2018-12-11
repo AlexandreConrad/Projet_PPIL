@@ -13,7 +13,7 @@ Forme::~Forme() {
 }
 
 void Forme::dessiner() {
-    std::cout << std::string(*this) << std::endl;
+    std::cout << "Envoi de la forme au serveur" << std::endl << " > " << std::string(*this) << std::endl;
 }
 
 std::ostream& operator<<(std::ostream& os, const Forme& forme) {
