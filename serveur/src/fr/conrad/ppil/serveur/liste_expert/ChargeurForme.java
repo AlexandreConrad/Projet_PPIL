@@ -21,19 +21,20 @@ public abstract class ChargeurForme {
 	}
 	
 	/*Fonction abstraite pour savoir s'il peut traiter l'information*/
-	abstract boolean peutTraiter(/*Information à remplir*/);
+	/*Information toujours sous forme "Croix [ x , y , z , w ]"s*/
+	abstract boolean peutTraiter(String information);
 	
 	/*Fonction de traitement s'il peut traiter l'information*/
-	abstract void /*Forme*/ traitementSpecialise();
+	abstract FormeGeometrique traitementSpecialise(String information);
 	
 	/*Fonction de test pour l'information*/
-	public void traiter(/*Information*/) {
-		if(peutTraiter() == true) {
-			return traitementSpecialise();
+	public FormeGeometrique traiter(String information) throws Exception {
+		if(peutTraiter(information) == true) {
+			return traitementSpecialise(information);
 		}else if (getSuivant() != null ) {
-			return getSuivant().traiter();
+			return getSuivant().traiter(information);
 		}else {
-			throw Erreur();
+			throw new Exception("Aucun traitement n\' pu être réalisé!");
 		}
 	}
 }
