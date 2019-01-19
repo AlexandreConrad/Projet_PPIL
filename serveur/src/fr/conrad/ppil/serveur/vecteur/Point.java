@@ -1,7 +1,7 @@
 package fr.conrad.ppil.serveur.vecteur;
 
 /**
- * Classe point qui permet de stocker les coordonnées x et y d'un point
+ * Classe point qui permet de stocker les coordonnÃ©es x et y d'un point
  * @author alexandre
  *
  */
@@ -9,7 +9,7 @@ public class Point {
 	
 
 	/**
-	 * Représente les coordonnées x et y d'un point
+	 * ReprÃ©sente les coordonnÃ©es x et y d'un point
 	 */
 	private float _X;
 	private float _Y;
@@ -48,7 +48,7 @@ public class Point {
 	/*Getters*/
 	
 	/**
-	 * Accésseur du X
+	 * AccÃ©sseur du X
 	 * @return
 	 */
 	public float getX() {
@@ -56,7 +56,7 @@ public class Point {
 	}
 	
 	/**
-	 * Accésseur du Y
+	 * AccÃ©sseur du Y
 	 * @return
 	 */
 	public float getY() {

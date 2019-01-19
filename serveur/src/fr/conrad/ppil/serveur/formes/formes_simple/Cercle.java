@@ -6,14 +6,14 @@ import fr.conrad.ppil.serveur.formes.Forme;
 import fr.conrad.ppil.serveur.vecteur.Point;
 
 /**
- * Forme géométrique en forme de cercle
+ * Forme gÃ©omÃ©trique en forme de cercle
  * @author alexandre
  *
  */
 public class Cercle extends Forme{
 
 	/**
-	 * Représente le rayon du cercle , dois être supérieur à >= à 0
+	 * ReprÃ©sente le rayon du cercle , dois Ãªtre supÃ©rieur Ã  >= Ã  0
 	 */
 	private float _Rayon;
 	
@@ -26,7 +26,7 @@ public class Cercle extends Forme{
 	 */
 	public Cercle(Couleur couleurCercle, float rayon,Point centre) throws Exception {
 		
-		/* Appel du constructeur père , car c'est une classe abstraite */
+		/* Appel du constructeur pÃ¨re , car c'est une classe abstraite */
 		super(couleurCercle);
 		
 		/* Ajout du centre */
@@ -52,13 +52,13 @@ public class Cercle extends Forme{
 	
 	/**
 	 * Initialisation du rayon
-	 * retourne une erreur s'il est inférieur à 0
+	 * retourne une erreur s'il est infÃ©rieur Ã  0
 	 * @param rayon
 	 * @throws Exception
 	 */
 	private void setRayon(float rayon) throws Exception {
 		if ( rayon < 0 )
-			throw new FormeException("Le rayon du cercle est invalide ( doit être >= à 0 )");
+			throw new FormeException("Le rayon du cercle est invalide ( doit Ãªtre >= Ã  0 )");
 		_Rayon = rayon;
 	}
 

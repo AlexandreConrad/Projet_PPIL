@@ -13,11 +13,11 @@ import fr.conrad.ppil.serveur.vecteur.Point;
 public class ChargeurPolygone extends ChargeurForme{
 
 	/**
-	 * Information toujours reçu sous forme "Polygone [(1.0,2.0,3.0),(x,y),(x,y),....]" 
+	 * Information toujours reÃ§u sous forme "Polygone [(1.0,2.0,3.0),(x,y),(x,y),....]" 
 	 */
 	
 	/**
-	 * Constructeur par défaut
+	 * Constructeur par dÃ©faut
 	 */
 	public ChargeurPolygone() {}
 	
@@ -30,19 +30,19 @@ public class ChargeurPolygone extends ChargeurForme{
 	@Override
 	Forme traitementSpecialise(String information) throws Exception {
 		
-		/* Découpage du string reçu */
+		/* DÃ©coupage du string reÃ§u */
 		String temp[] = modificationString(information, information.indexOf("[") + 1);
 		
-		/* Récupération de la longeur du tableau */
+		/* RÃ©cupÃ©ration de la longeur du tableau */
 		int taille = temp.length;
 		
-		/* Création de la couleur du polygone */
+		/* CrÃ©ation de la couleur du polygone */
 		Couleur couleurPolygone = new Couleur(Integer.parseInt(temp[0]),Integer.parseInt(temp[1]),Integer.parseInt(temp[2]));
 		
-		/* On crée la forme et on la retourne */
+		/* On crÃ©e la forme et on la retourne */
 		Forme polygone = new Polygone(couleurPolygone);
 		
-		/* Création des points du Polygone , 3 première case occupé par les couleurs */
+		/* CrÃ©ation des points du Polygone , 3 premiÃ¨re case occupÃ© par les couleurs */
 		for(int i = 3 ; i < taille ; i+=2) {
 			Point p = new Point(Float.parseFloat(temp[i]),Float.parseFloat(temp[i+1]));
 			polygone.addPoint(p);

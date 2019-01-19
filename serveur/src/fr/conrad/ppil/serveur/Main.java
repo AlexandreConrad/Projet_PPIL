@@ -15,7 +15,7 @@ import fr.conrad.ppil.serveur.liste_expert.ChargeurSegment;
 public class Main {
 
 	/**
-	 * Point d'entrÈe du programme
+	 * Point d'entr√©e du programme
 	 * @param args
 	 */
 	@SuppressWarnings("resource")
@@ -31,14 +31,14 @@ public class Main {
 					serverSocket = new ServerSocket(port);
 					break;
 				} catch ( BindException e ) {
-					System.err.println("Port " + port + " dÈj‡ utilisÈ.");
+					System.err.println("Port " + port + " d√©j√† utilis√©.");
 				}
 			}
 			
-			System.out.println("Serveur en Ècoute sur le port " + port);
+			System.out.println("Serveur en √©coute sur le port " + port);
 			
 		
-			/* CrÈation de notre chaÓne de responsabilitÈ */
+			/* Cr√©ation de notre cha√Æne de responsabilit√© */
 			ChargeurForme chargeurForme = new ChargeurSegment();
 			ChargeurForme chargeurCercle = new ChargeurCercle();
 			ChargeurForme chargeurPolygone = new ChargeurPolygone();
@@ -50,7 +50,7 @@ public class Main {
 			chargeurPolygone.setSuivant(chargeurFormeComposee);
 		
 			/*
-			 * Jeux de donnÈes
+			 * Jeux de donn√©es
 			 * String informationcompo = "FormeComposee[Segment [(0,0,255),(25,45),(85,60)], Cercle [(0,255,0),(150,150),(150)], Polygone [(155,155,155),(150,140),(200,200),(100,200)], Polygone [(255,5,5),(100,100),(400,100),(400,400),(100,400)]]";
 			 * String informationSegement = "Segment [(0,0,255),(25,45),(85.80,60.40)]";
 			 * String informationCercle = "Cercle [(0,255,0),(150,150),(150)]";
@@ -58,12 +58,12 @@ public class Main {
 			 * String informationRectangle = "Polygone [(255,5,5),(100,100),(400,100),(400,400),(100,400)]"; 
 			*/
 			
-			/* CrÈation du dessinateur */
+			/* Cr√©ation du dessinateur */
 			Dessinateur dessinateur = new DessinateurAWT();
 			
 			while ( true ) {
 				Socket socket = serverSocket.accept(); // on accepte la connection
-				Thread t = new Thread(new ClientProcessor(socket, chargeurForme, dessinateur));// on crÈe une instance
+				Thread t = new Thread(new ClientProcessor(socket, chargeurForme, dessinateur));// on cr√©e une instance
                 t.start();
                 
 				System.out.println("Nouveau client !");

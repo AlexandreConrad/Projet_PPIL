@@ -10,19 +10,19 @@ import fr.conrad.ppil.serveur.formes.Forme;
 public abstract class ChargeurForme {
 	
 	/**
-	 * Donnée membre
+	 * DonnÃ©e membre
 	 */
 	private ChargeurForme _Suivant;
 	
 	/**
-	 * Constructeur par défaut
+	 * Constructeur par dÃ©faut
 	 */
 	public ChargeurForme() {}
 	
 	/*Getter du suivant*/
 	
 	/**
-	 * Récupère le suivant de la liste d'expert
+	 * RÃ©cupÃ¨re le suivant de la liste d'expert
 	 * @return
 	 */
 	public ChargeurForme getSuivant() {
@@ -49,7 +49,7 @@ public abstract class ChargeurForme {
 	abstract boolean peutTraiter(String information);
 	
 	/**
-	 * Fonction abstraire qui réalise le traitement si la forme correspond
+	 * Fonction abstraire qui rÃ©alise le traitement si la forme correspond
 	 * @param information
 	 * @return
 	 * @throws Exception
@@ -57,7 +57,7 @@ public abstract class ChargeurForme {
 	abstract Forme traitementSpecialise(String information) throws Exception;
 	
 	/**
-	 * Fonction qui retourne la forme après traitement par la chaine de responsabilité
+	 * Fonction qui retourne la forme aprÃ¨s traitement par la chaine de responsabilitÃ©
 	 * @param information
 	 * @return
 	 * @throws Exception
@@ -68,25 +68,25 @@ public abstract class ChargeurForme {
 		}else if (getSuivant() != null ) {
 			return getSuivant().traiter(information);
 		}else {
-			throw new Exception("Aucun traitement n\'a pû être réalisé!");
+			throw new Exception("Aucun traitement n\'a pÃ» Ãªtre rÃ©alisÃ©!");
 		}
 	}
 	
-	/*Méthodes*/
+	/*MÃ©thodes*/
 	
 	/**
-	 * Modification du string reçu en entrée , découpage de la chaine et retourner dans un tableau de string
+	 * Modification du string reÃ§u en entrÃ©e , dÃ©coupage de la chaine et retourner dans un tableau de string
 	 * @param information
 	 * @param dep
 	 * @return
 	 */
 	public String[] modificationString(String information , int dep) {
 		
-		/* Création de la sous chaine coordonnée qui contient toutes les informations */
+		/* CrÃ©ation de la sous chaine coordonnÃ©e qui contient toutes les informations */
 		String provisoire = information.substring(dep);
 		String coordonnee = provisoire.replace("]", "").replace("(","").replace(")","");
 		 
-		/* Tableau temp qui contient à chaque case un chiffre */
+		/* Tableau temp qui contient Ã  chaque case un chiffre */
 		/* Les 3 premiers pour la couleur et le reste sont les points */
 		String temp[] = coordonnee.split(",");
 		

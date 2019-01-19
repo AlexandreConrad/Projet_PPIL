@@ -1,14 +1,14 @@
 package fr.conrad.ppil.serveur.couleurs;
 
 /**
- * Représente une couleur caractérisé par un niveau de rouge, vert et bleu ( compris entre 0 et 255 )
+ * ReprÃ©sente une couleur caractÃ©risÃ© par un niveau de rouge, vert et bleu ( compris entre 0 et 255 )
  * @author alexandre
  *
  */
 public class Couleur {
 		
 	/**
-	 * Donnée membre pour chaque couleur
+	 * DonnÃ©e membre pour chaque couleur
 	 */
 	private int _Rouge;
 	private int _Vert;
@@ -30,35 +30,35 @@ public class Couleur {
 	/* Setters */
 	
 	/**
-	 *  Setteur du Rouge , doit être compris entre 0 et 255
+	 *  Setteur du Rouge , doit Ãªtre compris entre 0 et 255
 	 * @param rouge
 	 * @throws CouleurException
 	 */
 	private void setRouge(int rouge) throws CouleurException {
 		if ( rouge > 255 || rouge < 0 )
-			throw new CouleurException("La valeur de la couleur rouge est invalide ( doit être comprise entre 0 et 255 )");
+			throw new CouleurException("La valeur de la couleur rouge est invalide ( doit Ãªtre comprise entre 0 et 255 )");
 		_Rouge = rouge;
 	}
 	
 	/**
-	 * Setteur du vert , doit être compris entre 0 et 255
+	 * Setteur du vert , doit Ãªtre compris entre 0 et 255
 	 * @param vert
 	 * @throws CouleurException
 	 */
 	private void setVert(int vert) throws CouleurException {
 		if ( vert > 255 || vert < 0 )
-			throw new CouleurException("La valeur de la couleur vert est invalide ( doit être comprise entre 0 et 255 )");
+			throw new CouleurException("La valeur de la couleur vert est invalide ( doit Ãªtre comprise entre 0 et 255 )");
 		_Vert = vert;	
 	}
 	
 	/**
-	 *  Setteur de bleu , doit être compris entre 0 et 255
+	 *  Setteur de bleu , doit Ãªtre compris entre 0 et 255
 	 * @param bleu
 	 * @throws CouleurException
 	 */
 	private void setBleu(int bleu) throws CouleurException {
 		if ( bleu < 0 || bleu > 255 )
-			throw new CouleurException("La valeur de la couleur bleu est invalide ( doit être comprise entre 0 et 255 )");
+			throw new CouleurException("La valeur de la couleur bleu est invalide ( doit Ãªtre comprise entre 0 et 255 )");
 		_Bleu = bleu;
 	}
 	

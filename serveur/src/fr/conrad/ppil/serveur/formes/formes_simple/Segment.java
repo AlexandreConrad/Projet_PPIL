@@ -6,14 +6,14 @@ import fr.conrad.ppil.serveur.formes.Forme;
 import fr.conrad.ppil.serveur.vecteur.Point;
 
 /**
- * Forme géométrique en forme de Segment ,  elle dois disposer de seulement deux points
+ * Forme gÃ©omÃ©trique en forme de Segment ,  elle dois disposer de seulement deux points
  * @author alexandre
  *
  */
 public class Segment extends Forme{
 
 	/**
-	 * Constructeur du segment, envoie au père la couleur
+	 * Constructeur du segment, envoie au pÃ¨re la couleur
 	 * @param couleur
 	 * @param x1
 	 * @param x2
@@ -21,7 +21,7 @@ public class Segment extends Forme{
 	 */
 	public Segment(Couleur couleur,Point x1 , Point x2) throws Exception {
 		
-		/* Appel du constructeur du père car elle est abstraite */
+		/* Appel du constructeur du pÃ¨re car elle est abstraite */
 		super(couleur);
 		
 		/* Ajout des points du segment */

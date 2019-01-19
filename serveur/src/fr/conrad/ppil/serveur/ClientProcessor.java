@@ -15,14 +15,14 @@ import fr.conrad.ppil.serveur.liste_expert.ChargeurForme;
 public class ClientProcessor implements Runnable {
 	
 	/**
-	 * Données membres
+	 * DonnÃ©es membres
 	 */
 	private Socket _Socket;
 	private ChargeurForme _ChargeurForme;
 	private Dessinateur _Dessinateur;
 	
 	/**
-	 * Constructeur qui prend 3 paramètres.
+	 * Constructeur qui prend 3 paramÃ¨tres.
 	 * @param socket
 	 * @param chargeurForme
 	 * @param dessinateur
@@ -34,7 +34,7 @@ public class ClientProcessor implements Runnable {
 	}
 
 	/**
-	 * Procèdure run qui est lancé par le .start
+	 * ProcÃ¨dure run qui est lancÃ© par le .start
 	 */
 	@Override
 	public void run() {
@@ -44,14 +44,14 @@ public class ClientProcessor implements Runnable {
 		    int taille;
 		    byte[] tabByte = new byte[4096];
 		    
-		    /* On lit l'information et on la mets dans "b" , avec stream qui est égale aux nombres de caractère lu */
+		    /* On lit l'information et on la mets dans "b" , avec stream qui est Ã©gale aux nombres de caractÃ¨re lu */
 		    taille = bufferedInputStream.read(tabByte);
 		    String messageForme = new String(tabByte, 0, taille);
 		    
 		    /* On affiche l'information */
 		    System.out.println(messageForme);
 		    
-		    /* Découpage */
+		    /* DÃ©coupage */
 		    String[] messageFormes = messageForme.split(";");
 		    
 		    /* Parcours de chaque information dans le chargeur de forme */

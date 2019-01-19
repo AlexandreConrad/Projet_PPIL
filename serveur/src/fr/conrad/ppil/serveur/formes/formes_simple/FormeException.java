@@ -4,7 +4,7 @@ package fr.conrad.ppil.serveur.formes.formes_simple;
 @SuppressWarnings("serial")
 
 /**
- * Forme Excéption
+ * Forme ExcÃ©ption
  * @author alexa
  *
  */

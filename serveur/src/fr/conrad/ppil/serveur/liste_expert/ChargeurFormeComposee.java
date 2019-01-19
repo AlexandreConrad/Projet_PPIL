@@ -7,14 +7,14 @@ import fr.conrad.ppil.serveur.formes.Forme;
 import fr.conrad.ppil.serveur.formes.formes_complexes.FormeComposee;
 
 /**
- * Chargeur de forme composée
+ * Chargeur de forme composÃ©e
  * @author alexandre
  *
  */
 public class ChargeurFormeComposee extends ChargeurForme{
 	
 	/**
-	 * information reçu est sous la forme FormeComposee [Segment [(255,255,255),(x,y),(x,y)], Cercle [(1.0,2.0,3.0),(x,y),rayon)], ...]
+	 * information reÃ§u est sous la forme FormeComposee [Segment [(255,255,255),(x,y),(x,y)], Cercle [(1.0,2.0,3.0),(x,y),rayon)], ...]
 	 */
 
 	@Override
@@ -26,11 +26,11 @@ public class ChargeurFormeComposee extends ChargeurForme{
 	@Override
 	Forme traitementSpecialise(String information) throws Exception {
 		
-		/* Découpage du string reçu */
+		/* DÃ©coupage du string reÃ§u */
 		String prov = information.substring(information.indexOf("[") + 1, information.length()-1);
 		String temp[] = prov.split("],");
 		
-		/* Création de notre chaîne de responsabilité */
+		/* CrÃ©ation de notre chaÃ®ne de responsabilitÃ© */
 		ChargeurForme chargeurForme = new ChargeurSegment();
 		ChargeurForme chargeurCercle = new ChargeurCercle();
 		ChargeurForme chargeurPolygone = new ChargeurPolygone();
@@ -41,10 +41,10 @@ public class ChargeurFormeComposee extends ChargeurForme{
 		chargeurCercle.setSuivant(chargeurPolygone);
 		chargeurPolygone.setSuivant(chargeurFormeComposee);
 		
-		/* Liste des formes reç u*/
+		/* Liste des formes reÃ§ u*/
 		ArrayList<Forme> formes = new ArrayList<Forme>();
 		
-		/* On applique un traitement pour avoir un découpage parfait pour l'envoie à la chaine de reponsabilité */
+		/* On applique un traitement pour avoir un dÃ©coupage parfait pour l'envoie Ã  la chaine de reponsabilitÃ© */
 		for(int i = 0 ; i < temp.length ; i++) {
 			String informationBis = temp[i];
 			if  (i == 0) {
@@ -59,12 +59,12 @@ public class ChargeurFormeComposee extends ChargeurForme{
 			/* Affichage des informations */
 			System.out.println(informationBis);
 			
-			/* On récupere la forme et on l'ajoute à notre liste */
+			/* On rÃ©cupere la forme et on l'ajoute Ã  notre liste */
 			Forme provisoireForme = chargeurForme.traiter(informationBis);
 			formes.add(provisoireForme);
 		}
 		
-		/* On envoie la forme  à forme composée */
+		/* On envoie la forme  Ã  forme composÃ©e */
 		FormeComposee formeComposee = new FormeComposee(new Couleur(0, 0, 0));
 		for ( Forme f : formes )
 			formeComposee.ajouterForme(f);

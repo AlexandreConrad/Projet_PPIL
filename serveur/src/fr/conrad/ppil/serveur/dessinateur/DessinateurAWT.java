@@ -20,32 +20,32 @@ import fr.conrad.ppil.serveur.formes.formes_simple.Segment;
 public class DessinateurAWT implements Dessinateur {
 	
 	/**
-	 * Représente la stratégie du buffer de la fenêtre AWT
+	 * ReprÃ©sente la stratÃ©gie du buffer de la fenÃªtre AWT
 	 */
 	private BufferStrategy strategie;
 	/**
-	 * Représente la composante graphique de la fenêtre AWT
+	 * ReprÃ©sente la composante graphique de la fenÃªtre AWT
 	 */
 	private Graphics graphics;
 	
 	/**
-	 * Permet de créer la fenêtre AWT
+	 * Permet de crÃ©er la fenÃªtre AWT
 	 * Lance une exception si le thread ne peut pas attendre 150 ms
 	 * @throws Exception
 	 */
 	private void debutAffichage() throws Exception {
 		
-		/* Création de la fenêtre */
+		/* CrÃ©ation de la fenÃªtre */
 		Frame fenetre = new Frame("Affichage de votre forme");
 	    
 	    /*On donne les dimensions*/
 	    fenetre.setBounds(250, 250, 500, 500);
 	    
-	    /*Rend la frame visible sur l'écran*/
+	    /*Rend la frame visible sur l'Ã©cran*/
 	    fenetre.setVisible(true);
-	    fenetre.setIgnoreRepaint(true);        // désactive l'appel automatique de la fct paint(...) par repaint()
+	    fenetre.setIgnoreRepaint(true);        // dÃ©sactive l'appel automatique de la fct paint(...) par repaint()
 	    
-	    /*Permet de fermer la fenêtre*/
+	    /*Permet de fermer la fenÃªtre*/
 	    fenetre.addWindowListener(new WindowAdapter() {
 
 			@Override
@@ -56,7 +56,7 @@ public class DessinateurAWT implements Dessinateur {
 	    });
 	    
 	    int numBuffers = 1;
-	    fenetre.createBufferStrategy(numBuffers);  // crée une stratégie de tampon d'image à 1 tampon vidéo
+	    fenetre.createBufferStrategy(numBuffers);  // crÃ©e une stratÃ©gie de tampon d'image Ã  1 tampon vidÃ©o
 		Thread.sleep(150);// On laisse du temps pour  le buffert d'image    
 	    
 		strategie = fenetre.getBufferStrategy();
@@ -64,26 +64,26 @@ public class DessinateurAWT implements Dessinateur {
 	}
 	
 	/**
-	 * Fin du code qui permet d'afficher une fenêtre
+	 * Fin du code qui permet d'afficher une fenÃªtre
 	 */
 	private void finAffichage() {
-	    strategie.show();       // place le tampon sur l'écran : la technique utilisée dépend du type de stratégie utilisé : blitting, pointeur vidéo, etc.
+	    strategie.show();       // place le tampon sur l'Ã©cran : la technique utilisÃ©e dÃ©pend du type de stratÃ©gie utilisÃ© : blitting, pointeur vidÃ©o, etc.
 	    graphics.dispose();
 	}
 
 	@Override
 	public void dessiner(Cercle cercle) throws Exception {		
-		/*Procédure pour utilisé le début de code pour ouvrire une fenêtre*/
+		/*ProcÃ©dure pour utilisÃ© le dÃ©but de code pour ouvrire une fenÃªtre*/
 		this.debutAffichage();
 	    
 	    dessiner(cercle, graphics);
 	    	
-		/*Procédure fin de fenêtre*/
+		/*ProcÃ©dure fin de fenÃªtre*/
 		this.finAffichage();
 	}
 	
 	/**
-	 * Procédure qui dessine un cercle grâce à dessiner.
+	 * ProcÃ©dure qui dessine un cercle grÃ¢ce Ã  dessiner.
 	 * @param cercle
 	 * @param graphics
 	 * @throws Exception
@@ -106,13 +106,13 @@ public class DessinateurAWT implements Dessinateur {
 	}
 	
 	/**
-	 * Procèdure qui affiche et dessine un Polygone
+	 * ProcÃ¨dure qui affiche et dessine un Polygone
 	 * @param polygone
 	 * @param graphics
 	 * @throws Exception
 	 */
 	public void dessiner(Polygone polygone, Graphics graphics) throws Exception {
-		/*Récupération du nombres de points*/
+		/*RÃ©cupÃ©ration du nombres de points*/
 	    int nbPoints = polygone.getTailleTab();
 	    
 	    /*Mettre la couleur sur la forme*/
@@ -140,7 +140,7 @@ public class DessinateurAWT implements Dessinateur {
 	
 
 	/**
-	 * Procèdure qui déssine un ségment
+	 * ProcÃ¨dure qui dÃ©ssine un sÃ©gment
 	 * @param segment
 	 * @param graphics
 	 * @throws Exception
@@ -156,7 +156,7 @@ public class DessinateurAWT implements Dessinateur {
 	}
 
 	/**
-	 * Procèdure qui affiche une forme composée
+	 * ProcÃ¨dure qui affiche une forme composÃ©e
 	 */
 	@Override
 	public void dessiner(FormeComposee formeComposee) throws Exception {

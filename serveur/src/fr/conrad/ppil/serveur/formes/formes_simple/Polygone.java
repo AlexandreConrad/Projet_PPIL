@@ -5,14 +5,14 @@ import fr.conrad.ppil.serveur.dessinateur.Dessinateur;
 import fr.conrad.ppil.serveur.formes.Forme;
 
 /**
- * Forme géométrique en forme de Polygone , n'importe quel forme qui dispose de plus de 3 points
+ * Forme gÃ©omÃ©trique en forme de Polygone , n'importe quel forme qui dispose de plus de 3 points
  * @author alexandre
  *
  */
 public class Polygone extends Forme{
 	
 	/**
-	 * Constructeur du polygone, envoie au père la couleur
+	 * Constructeur du polygone, envoie au pÃ¨re la couleur
 	 * @param couleurPolygone
 	 * @throws Exception
 	 */

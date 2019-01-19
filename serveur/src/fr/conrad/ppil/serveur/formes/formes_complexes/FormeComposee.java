@@ -7,19 +7,19 @@ import fr.conrad.ppil.serveur.dessinateur.Dessinateur;
 import fr.conrad.ppil.serveur.formes.Forme;
 
 /**
- * Classe pour les formes composées
+ * Classe pour les formes composÃ©es
  * @author alexa
  *
  */
 public class FormeComposee extends Forme {
 	
 	/**
-	 * Donnée membre , Liste de Formes
+	 * DonnÃ©e membre , Liste de Formes
 	 */
 	private ArrayList<Forme> _Formes = new ArrayList<Forme>();
 
 	/**
-	 * Constructeur de forme Composée , il envoie à forme la couleur
+	 * Constructeur de forme ComposÃ©e , il envoie Ã  forme la couleur
 	 * @param color
 	 * @throws Exception
 	 */
@@ -30,7 +30,7 @@ public class FormeComposee extends Forme {
 	/* Getters */
 	
 	/**
-	 * Retourne une des formes de la forme composée à la position i
+	 * Retourne une des formes de la forme composÃ©e Ã  la position i
 	 * @param i
 	 * @return
 	 */
@@ -39,17 +39,17 @@ public class FormeComposee extends Forme {
 	}
 	
 	/**
-	 * Retourne le nombre de forme de la FormeComposée
+	 * Retourne le nombre de forme de la FormeComposÃ©e
 	 * @return
 	 */
 	public int getNbFormes() {
 		return _Formes.size();
 	}
 	
-	/* Méthodes */
+	/* MÃ©thodes */
 	
 	/**
-	 * Ajout une forme à la liste de forme
+	 * Ajout une forme Ã  la liste de forme
 	 * @param f
 	 */
 	public void ajouterForme(Forme f) {

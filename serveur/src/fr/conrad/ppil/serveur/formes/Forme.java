@@ -14,7 +14,7 @@ import fr.conrad.ppil.serveur.vecteur.Point;
 public abstract class Forme {
 	
 	/**
-	 * Données membres 
+	 * DonnÃ©es membres 
 	 * La couleur de la forme 
 	 * Liste de Points pour la forme
 	 */
@@ -22,7 +22,7 @@ public abstract class Forme {
 	private ArrayList<Point> _ListePoints;
 	
 	/**
-	 * Constructeur de Forme qui prend en unique paramêtre une couleur
+	 * Constructeur de Forme qui prend en unique paramÃªtre une couleur
 	 * @param color
 	 * @throws Exception
 	 */
@@ -45,7 +45,7 @@ public abstract class Forme {
 	/*Getter*/
 	
 	/**
-	 * Récupère la classe couleur de la forme
+	 * RÃ©cupÃ¨re la classe couleur de la forme
 	 * @return
 	 */
 	public Couleur getCouleurFormeSimple() {
@@ -53,17 +53,17 @@ public abstract class Forme {
 	}
 	
 	/**
-	 * Récupère la taille du tableau de points
+	 * RÃ©cupÃ¨re la taille du tableau de points
 	 * @return
 	 */
 	public int getTailleTab() {
 		return _ListePoints.size();
 	}
 	
-	/*Méthodes*/
+	/*MÃ©thodes*/
 	
 	/**
-	 * Ajout de points à notre polygone
+	 * Ajout de points Ã  notre polygone
 	 * @param p
 	 */
 	public void addPoint(Point p) {
@@ -71,7 +71,7 @@ public abstract class Forme {
 	}
 	
 	/**
-	 * Récupère le points d'un polygone à un certains points
+	 * RÃ©cupÃ¨re le points d'un polygone Ã  un certains points
 	 * @param position
 	 * @return
 	 */
@@ -80,7 +80,7 @@ public abstract class Forme {
 	}
 	
 	/**
-	 * Affiche avec un déssinateur. Appelle la procèdure afficher du fils
+	 * Affiche avec un dÃ©ssinateur. Appelle la procÃ¨dure afficher du fils
 	 * @param dessinateur
 	 * @throws Exception
 	 */
