@@ -1,21 +1,30 @@
 //
-// Created by theobarrague on 11/12/18.
+// Created by theobarrague on 11/01/19.
 //
 
 #include "Forme.h"
-
-Forme::Forme() {
-
-}
+#include <sstream>
+#include <Surface.h>
+#include <Sauvegarde.h>
 
 Forme::~Forme() {
 
 }
 
-void Forme::dessiner() {
-    std::cout << "Envoi de la forme au serveur" << std::endl << " > " << std::string(*this) << std::endl;
+void Forme::dessiner(Surface &surface) {
+  surface.dessiner(*this);
 }
 
-std::ostream& operator<<(std::ostream& os, const Forme& forme) {
-    return os << std::string(forme);
+void Forme::sauvegarder(Sauvegarde &sauvegarde) {
+  sauvegarde.sauvegarder(*this);
+}
+
+std::ostream &operator<<(std::ostream &os, const Forme &forme) {
+  return os << std::string(forme);
+}
+
+Forme::operator std::string() const {
+  std::ostringstream ss;
+  ss << "Forme []";
+  return ss.str();
 }
