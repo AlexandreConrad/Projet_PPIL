@@ -57,6 +57,11 @@ class FormeSimple : public Forme {
    */
   virtual Forme *cloner() const = 0;
 
+  /**
+   * @see Forme::calculerAire
+   */
+  virtual double calculerAire() const;
+
  protected:
   /**
    * Représente la couleur de la forme

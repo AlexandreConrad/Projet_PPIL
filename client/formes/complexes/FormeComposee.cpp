@@ -51,5 +51,11 @@ Forme *FormeComposee::transformer(const Transformation &transformation) const {
 Forme *FormeComposee::cloner() const {
   return new FormeComposee(*this);
 }
+double FormeComposee::calculerAire() const {
+  double aire(0);
+  for (Forme *f : _formes)
+    aire += f->calculerAire();
+  return aire;
+}
 
 

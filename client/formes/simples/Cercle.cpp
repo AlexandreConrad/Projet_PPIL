@@ -2,7 +2,10 @@
 // Created by theobarrague on 11/01/19.
 //
 
+#define _USE_MATH_DEFINES
+
 #include <sstream>
+#include <cmath>
 #include <transformations/Transformation.h>
 #include "Cercle.h"
 
@@ -39,4 +42,8 @@ Forme *Cercle::transformer(const Transformation &transformation) const {
 
 Forme *Cercle::cloner() const {
   return new Cercle(*this);
+}
+
+double Cercle::calculerAire() const {
+  return M_PI * (_rayon * _rayon);
 }

@@ -52,6 +52,11 @@ class Cercle : public FormeSimple {
    */
   virtual Forme *cloner() const;
 
+  /**
+   * @see Forme::calculerAire
+   */
+  virtual double calculerAire() const;
+
  private:
   /**
    * Représente le rayon du cercle

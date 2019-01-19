@@ -39,3 +39,17 @@ FormeSimple::operator std::string() const {
   ss << "]]";
   return ss.str();
 }
+
+double FormeSimple::calculerAire() const {
+  if (_points.size() < 3)
+    return 0;
+
+  double aire(0);
+  for (int i = 0; i < _points.size() - 1; i++) {
+    aire += _points[i].getX() * _points[i + 1].getY() - _points[i + 1].getX() * _points[i].getY();
+  }
+  aire +=
+      _points[_points.size() - 1].getX() * _points[0].getY() - _points[0].getX() * _points[_points.size() - 1].getY();
+
+  return 1. / 2. * aire;
+}

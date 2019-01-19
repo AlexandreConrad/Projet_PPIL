@@ -55,6 +55,11 @@ class FormeComposee : public Forme {
    */
   virtual Forme *cloner() const;
 
+  /**
+   * @see Forme::calculerAire
+   */
+  virtual double calculerAire() const;
+
  private:
   std::vector<Forme *> _formes;
 };

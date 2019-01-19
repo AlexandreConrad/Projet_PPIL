@@ -46,6 +46,7 @@ int main() {
   //
   Segment segment(noir, Vecteur2D(250, 250), Vecteur2D(400, 250));
   Cercle cercle(noir, Vecteur2D(250, 250), 150);
+  std::cout << "Aire : " << cercle.calculerAire() << std::endl;
   Polygone polygone(vert);
   polygone.ajouterSommet(Vecteur2D(100, 100));
   polygone.ajouterSommet(Vecteur2D(300, 100));

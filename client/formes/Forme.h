@@ -31,6 +31,12 @@ class Forme {
   void sauvegarder(Sauvegarde &sauvegarde);
 
   /**
+   * Calcule l'aire de la forme
+   * @return l'aire de la forme en unité
+   */
+  virtual double calculerAire() const = 0;
+
+  /**
    * Surcharge de l'opérateur << pour la sortie sur un flux
    * @param os Le flux de sortie
    * @param forme La forme à afficher
