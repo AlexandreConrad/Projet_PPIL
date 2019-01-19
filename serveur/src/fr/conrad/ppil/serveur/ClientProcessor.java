@@ -42,11 +42,11 @@ public class ClientProcessor implements Runnable {
 			/* Ce qu'on revois , on le mets dans un tanpom */
 			BufferedInputStream bufferedInputStream = new BufferedInputStream(_Socket.getInputStream());
 		    int taille;
-		    byte[] b = new byte[4096];
+		    byte[] tabByte = new byte[4096];
 		    
 		    /* On lit l'information et on la mets dans "b" , avec stream qui est égale aux nombres de caractère lu */
-		    taille = bufferedInputStream.read(b);
-		    String messageForme = new String(b, 0, taille);
+		    taille = bufferedInputStream.read(tabByte);
+		    String messageForme = new String(tabByte, 0, taille);
 		    
 		    /* On affiche l'information */
 		    System.out.println(messageForme);
@@ -64,7 +64,7 @@ public class ClientProcessor implements Runnable {
 			
 			_Socket.close();
 		} catch ( Exception e ) {
-			/*Retourne le message d'erreur*/
+			/*Retourner le message d'erreur*/
 			e.printStackTrace();
 		}
 	}
