@@ -1,40 +1,95 @@
 package fr.conrad.ppil.serveur.liste_expert;
 
-public abstract class ChargeurForme {
+import fr.conrad.ppil.serveur.formes.Forme;
 
-	private ChargeurForme suivant;
+/**
+ * Chargeur Forme Expert , s'occupe de transmettre les informations au fils
+ * @author alexandre
+ *
+ */
+public abstract class ChargeurForme {
 	
-	/*Constructeur*/
-	public ChargeurForme() {
-		
-	}
+	/**
+	 * Donnée membre
+	 */
+	private ChargeurForme _Suivant;
 	
-	/*Accès au suivant*/
+	/**
+	 * Constructeur par défaut
+	 */
+	public ChargeurForme() {}
+	
+	/*Getter du suivant*/
+	
+	/**
+	 * Récupère le suivant de la liste d'expert
+	 * @return
+	 */
 	public ChargeurForme getSuivant() {
-		return suivant;
+		return _Suivant;
 	}
 	
-	/*Nouveau suivant*/
+	/*Setter du suivant*/
+	
+	/**
+	 * Initialise le suivant
+	 * @param prochain
+	 * @return
+	 */
 	public ChargeurForme setSuivant(ChargeurForme prochain) {
-		this.suivant = prochain;
-		return suivant;
+		this._Suivant = prochain;
+		return _Suivant;
 	}
 	
-	/*Fonction abstraite pour savoir s'il peut traiter l'information*/
-	/*Information toujours sous forme "Croix [ x , y , z , w ]"s*/
+	/**
+	 * Fonction abstraite qui test s'il correspond
+	 * @param information
+	 * @return
+	 */
 	abstract boolean peutTraiter(String information);
 	
-	/*Fonction de traitement s'il peut traiter l'information*/
-	abstract FormeGeometrique traitementSpecialise(String information);
+	/**
+	 * Fonction abstraire qui réalise le traitement si la forme correspond
+	 * @param information
+	 * @return
+	 * @throws Exception
+	 */
+	abstract Forme traitementSpecialise(String information) throws Exception;
 	
-	/*Fonction de test pour l'information*/
-	public FormeGeometrique traiter(String information) throws Exception {
+	/**
+	 * Fonction qui retourne la forme après traitement par la chaine de responsabilité
+	 * @param information
+	 * @return
+	 * @throws Exception
+	 */
+	public Forme traiter(String information) throws Exception {
 		if(peutTraiter(information) == true) {
 			return traitementSpecialise(information);
 		}else if (getSuivant() != null ) {
 			return getSuivant().traiter(information);
 		}else {
-			throw new Exception("Aucun traitement n\' pu être réalisé!");
+			throw new Exception("Aucun traitement n\'a pû être réalisé!");
 		}
+	}
+	
+	/*Méthodes*/
+	
+	/**
+	 * Modification du string reçu en entrée , découpage de la chaine et retourner dans un tableau de string
+	 * @param information
+	 * @param dep
+	 * @return
+	 */
+	public String[] modificationString(String information , int dep) {
+		
+		/* Création de la sous chaine coordonnée qui contient toutes les informations */
+		String provisoire = information.substring(dep);
+		String coordonnee = provisoire.replace("]", "").replace("(","").replace(")","");
+		 
+		/* Tableau temp qui contient à chaque case un chiffre */
+		/* Les 3 premiers pour la couleur et le reste sont les points */
+		String temp[] = coordonnee.split(",");
+		
+		return temp;
 	}
 }
