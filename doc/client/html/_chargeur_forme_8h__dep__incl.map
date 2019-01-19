@@ -1,12 +1,12 @@
-<map id="chargeurs/ChargeurForme.h" name="chargeurs/ChargeurForme.h">
-<area shape="rect" id="node1" title=" " alt="" coords="517,5,699,32"/>
-<area shape="rect" id="node2" href="$_chargeur_cercle_8h.html" title=" " alt="" coords="155,80,338,107"/>
-<area shape="rect" id="node5" href="$_chargeur_forme_composee_8h.html" title=" " alt="" coords="363,80,608,107"/>
-<area shape="rect" id="node7" href="$_chargeur_polygone_8h.html" title=" " alt="" coords="632,80,832,107"/>
-<area shape="rect" id="node9" href="$_chargeur_segment_8h.html" title=" " alt="" coords="863,80,1062,107"/>
-<area shape="rect" id="node3" href="$_chargeur_cercle_8cpp.html" title=" " alt="" coords="5,155,203,181"/>
-<area shape="rect" id="node4" href="$main_8cpp.html" title=" " alt="" coords="227,155,301,181"/>
-<area shape="rect" id="node6" href="$_chargeur_forme_composee_8cpp.html" title=" " alt="" coords="341,155,600,181"/>
-<area shape="rect" id="node8" href="$_chargeur_polygone_8cpp.html" title=" " alt="" coords="625,155,839,181"/>
-<area shape="rect" id="node10" href="$_chargeur_segment_8cpp.html" title=" " alt="" coords="863,155,1075,181"/>
+<map id="src/chargeurs/ChargeurForme.h" name="src/chargeurs/ChargeurForme.h">
+<area shape="rect" id="node1" title=" " alt="" coords="511,5,716,32"/>
+<area shape="rect" id="node2" href="$_chargeur_cercle_8h.html" title=" " alt="" coords="171,87,376,114"/>
+<area shape="rect" id="node5" href="$_chargeur_forme_composee_8h.html" title=" " alt="" coords="400,80,595,121"/>
+<area shape="rect" id="node7" href="$_chargeur_polygone_8h.html" title=" " alt="" coords="619,87,842,114"/>
+<area shape="rect" id="node9" href="$_chargeur_segment_8h.html" title=" " alt="" coords="873,87,1093,114"/>
+<area shape="rect" id="node3" href="$_chargeur_cercle_8cpp.html" title=" " alt="" coords="5,177,224,203"/>
+<area shape="rect" id="node4" href="$main_8cpp.html" title=" " alt="" coords="249,177,346,203"/>
+<area shape="rect" id="node6" href="$_chargeur_forme_composee_8cpp.html" title=" " alt="" coords="393,169,588,211"/>
+<area shape="rect" id="node8" href="$_chargeur_polygone_8cpp.html" title=" " alt="" coords="613,177,849,203"/>
+<area shape="rect" id="node10" href="$_chargeur_segment_8cpp.html" title=" " alt="" coords="873,177,1108,203"/>
 </map>

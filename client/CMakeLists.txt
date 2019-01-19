@@ -56,7 +56,6 @@ add_executable(client-ppil
         src/transformations/Translation.h
         src/vecteurs/Vecteur2D.cpp
         src/vecteurs/Vecteur2D.h
-        CMakeLists.txt
         src/main.cpp
         src/sockets/Socket.cpp
         src/sockets/Socket.h)
