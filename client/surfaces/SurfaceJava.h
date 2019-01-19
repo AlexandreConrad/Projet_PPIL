@@ -29,6 +29,11 @@ class SurfaceJava : public Surface {
    */
   virtual void dessiner(const Forme &forme);
 
+  /**
+   * Met à jour la surface Java ( envoi toutes les informations au serveur )
+   */
+  void miseAJour();
+
  private:
   /**
    * Représente l'hôte
@@ -44,6 +49,11 @@ class SurfaceJava : public Surface {
    * Représente la connexion réseau
    */
   SOCKET _sock;
+
+  /**
+   * Message à envoyer au serveur Java
+   */
+  std::string _message;
 };
 
 #endif  // CLIENT_PPIL_SURFACEJAVA_H

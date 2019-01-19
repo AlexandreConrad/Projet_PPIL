@@ -14,8 +14,6 @@ include_directories(surfaces)
 include_directories(transformations)
 include_directories(vecteurs)
 
-set(CMAKE_EXE_LINKER_FLAGS "-static")
-
 add_executable(client-ppil
         chargeurs/ChargeurCercle.cpp
         chargeurs/ChargeurCercle.h
@@ -65,4 +63,5 @@ add_executable(client-ppil
 
 if (WIN32)
     target_link_libraries(client-ppil wsock32 ws2_32)
+    set(CMAKE_EXE_LINKER_FLAGS "-static")
 endif ()

@@ -5,6 +5,7 @@
 #include <sstream>
 #include <cmath>
 #include "Vecteur2D.h"
+#include <iostream>
 
 Vecteur2D::operator std::string() const {
   std::ostringstream ss;
@@ -42,7 +43,7 @@ Vecteur2D Vecteur2D::operator+(const Vecteur2D &vecteur2D) const {
 }
 
 Vecteur2D Vecteur2D::operator-(const Vecteur2D &vecteur2D) const {
-  return Vecteur2D(-_x, -_y);
+  return Vecteur2D(getX() - vecteur2D.getX(), getY() - vecteur2D.getY());
 }
 
 Vecteur2D Vecteur2D::homothetie(const Vecteur2D &origine, float rapport) const {
@@ -51,9 +52,15 @@ Vecteur2D Vecteur2D::homothetie(const Vecteur2D &origine, float rapport) const {
   return Vecteur2D(x, y);
 }
 
-Vecteur2D Vecteur2D::rotation(const Vecteur2D &origine, float angle) const {
+Vecteur2D Vecteur2D::rotation(const Vecteur2D &origine, float angleRad) const {
   Vecteur2D v1 = *this - origine;
-  float x = (v1.getX() * ((float) cos(angle)) + v1.getY() * ((float) sin(angle)) + origine.getX());
-  float y = (-v1.getX() * ((float) sin(angle)) + v1.getY() * ((float) cos(angle)) + origine.getY());
+  std::cout << *this << " - " << origine << " = " << v1 << std::endl;
+
+  double x = (v1.getX() * cos(angleRad) + v1.getY() * sin(angleRad)) + origine.getX();
+  double y = (-v1.getX() * sin(angleRad) + v1.getY() * cos(angleRad)) + origine.getY();
+
+  std::cout << "x : " << x << " " << (float) x << std::endl;
+  std::cout << "y : " << x << " " << (float) x << std::endl;
+
   return Vecteur2D(x, y);
 }

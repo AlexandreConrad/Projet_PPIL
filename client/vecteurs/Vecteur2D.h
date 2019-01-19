@@ -52,10 +52,10 @@ class Vecteur2D {
   /**
    * Effectue une rotation du point
    * @param origine L'origine de la rotation
-   * @param angle L'angle en radians de la rotation
+   * @param angleRad L'angle en radians de la rotation
    * @return Un vecteur transformé
    */
-  Vecteur2D rotation(const Vecteur2D &origine, float angle) const;
+  Vecteur2D rotation(const Vecteur2D &origine, float angleRad) const;
 
   /**
    * Surcharge de l'opérateur + pour l'addition de deux vecteurs

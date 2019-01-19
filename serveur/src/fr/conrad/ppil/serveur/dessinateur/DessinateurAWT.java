@@ -1,16 +1,14 @@
 package fr.conrad.ppil.serveur.dessinateur;
 
-import java.awt.Color;
-import java.awt.Frame;
-import java.awt.Graphics;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
-import java.awt.image.BufferStrategy;
-
 import fr.conrad.ppil.serveur.formes.formes_complexes.FormeComposee;
 import fr.conrad.ppil.serveur.formes.formes_simple.Cercle;
 import fr.conrad.ppil.serveur.formes.formes_simple.Polygone;
 import fr.conrad.ppil.serveur.formes.formes_simple.Segment;
+
+import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.awt.image.BufferStrategy;
 
 /**
  * Permet de dessiner 
@@ -91,8 +89,8 @@ public class DessinateurAWT implements Dessinateur {
 	public void dessiner(Cercle cercle, Graphics graphics) throws Exception {		
 	    /*Mettre la couleur sur la forme*/
 	    graphics.setColor(new Color(cercle.getCouleurFormeSimple().getRouge(), cercle.getCouleurFormeSimple().getVert(), cercle.getCouleurFormeSimple().getBleu()));
-	    
-	    graphics.drawOval((int)cercle.getElement(0).getX(), (int)cercle.getElement(0).getY(), (int)cercle.getRayon(), (int)cercle.getRayon());
+
+        graphics.drawOval((int) cercle.getElement(0).getX() - (int) cercle.getRayon(), (int) cercle.getElement(0).getY() - (int) cercle.getRayon(), (int) cercle.getRayon() * 2, (int) cercle.getRayon() * 2);
 	}
 
 	@Override
