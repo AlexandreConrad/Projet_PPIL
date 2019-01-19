@@ -5,10 +5,10 @@
 #ifndef CLIENT_PPIL_FORMESIMPLE_H
 #define CLIENT_PPIL_FORMESIMPLE_H
 
-#include <couleurs/Couleur.h>
+#include <src/couleurs/Couleur.h>
 #include <vecteurs/Vecteur2D.h>
 #include <vector>
-#include <formes/Forme.h>
+#include <src/formes/Forme.h>
 
 /**
  * Représente une forme composée de points et d'une couleur

@@ -5,7 +5,7 @@
 #ifndef CLIENT_PPIL_FORMECOMPOSEE_H
 #define CLIENT_PPIL_FORMECOMPOSEE_H
 
-#include <formes/Forme.h>
+#include <src/formes/Forme.h>
 #include <vector>
 
 /**
@@ -28,7 +28,7 @@ class FormeComposee : public Forme {
    * @param pos La position dans la liste
    * @return La forme à la position pos dans la liste des formes
    */
-  const Forme &getForme(int i) const;
+  const Forme &getForme(int pos) const;
 
   /**
    * @param forme La forme à ajouter

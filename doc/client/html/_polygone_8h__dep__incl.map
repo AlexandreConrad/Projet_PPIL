@@ -1,0 +1,13 @@
+<map id="formes/simples/Polygone.h" name="formes/simples/Polygone.h">
+<area shape="rect" id="node1" title=" " alt="" coords="354,5,533,32"/>
+<area shape="rect" id="node2" href="$_chargeur_polygone_8cpp.html" title=" " alt="" coords="5,80,220,107"/>
+<area shape="rect" id="node3" href="$_polygone_8cpp.html" title=" " alt="" coords="244,80,437,107"/>
+<area shape="rect" id="node4" href="$_triangle_8h.html" title=" " alt="" coords="462,80,633,107"/>
+<area shape="rect" id="node7" href="$_translation_8h.html" title=" " alt="" coords="650,155,839,181"/>
+<area shape="rect" id="node5" href="$_triangle_8cpp.html" title=" " alt="" coords="210,155,394,181"/>
+<area shape="rect" id="node6" href="$_homothetie_8cpp.html" title=" " alt="" coords="419,155,625,181"/>
+<area shape="rect" id="node8" href="$_rotation_8h.html" title=" " alt="" coords="551,229,725,256"/>
+<area shape="rect" id="node11" href="$_translation_8cpp.html" title=" " alt="" coords="750,229,953,256"/>
+<area shape="rect" id="node9" href="$main_8cpp.html" title=" " alt="" coords="523,304,598,331"/>
+<area shape="rect" id="node10" href="$_rotation_8cpp.html" title=" " alt="" coords="623,304,811,331"/>
+</map>

@@ -6,10 +6,10 @@
 #define CLIENT_PPIL_TRANSLATION_H
 
 #include <vecteurs/Vecteur2D.h>
-#include <formes/simples/Segment.h>
-#include <formes/simples/Cercle.h>
-#include <formes/simples/Triangle.h>
-#include <formes/simples/Polygone.h>
+#include <src/formes/simples/Segment.h>
+#include <src/formes/simples/Cercle.h>
+#include <src/formes/simples/Triangle.h>
+#include <src/formes/simples/Polygone.h>
 #include "Transformation.h"
 
 class Translation : public Transformation {

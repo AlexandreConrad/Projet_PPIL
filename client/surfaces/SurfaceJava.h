@@ -5,8 +5,8 @@
 #ifndef CLIENT_PPIL_SURFACEJAVA_H
 #define CLIENT_PPIL_SURFACEJAVA_H
 
-#include <sockets/Socket.h>
-#include <surfaces/Surface.h>
+#include <src/sockets/Socket.h>
+#include <src/surfaces/Surface.h>
 #include <string>
 
 /**

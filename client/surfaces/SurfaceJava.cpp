@@ -3,7 +3,7 @@
 //
 
 #include "SurfaceJava.h"
-#include <formes/Forme.h>
+#include <src/formes/Forme.h>
 #include <cstring>
 #include <iostream>
 #include <sstream>

@@ -3,9 +3,9 @@
 //
 
 #include "Homothetie.h"
-#include <formes/simples/Cercle.h>
-#include <formes/simples/Segment.h>
-#include <formes/simples/Triangle.h>
+#include <src/formes/simples/Cercle.h>
+#include <src/formes/simples/Segment.h>
+#include <src/formes/simples/Triangle.h>
 
 Homothetie::Homothetie(const Vecteur2D &origine, float rapport)
     : _origine(origine), _rapport(rapport) {

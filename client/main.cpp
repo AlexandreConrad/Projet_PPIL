@@ -4,7 +4,7 @@
 #include <Rotation.h>
 #include <SauvegardeTexte.h>
 #include <SurfaceJava.h>
-#include <formes/complexes/FormeComposee.h>
+#include <src/formes/complexes/FormeComposee.h>
 #include <cmath>
 #include <fstream>
 #include <iostream>

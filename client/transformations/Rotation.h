@@ -16,7 +16,7 @@ class Triangle;
 /**
  * Représente une rotation géométrique
  */
-class Rotation : public Translation {
+class Rotation : public Transformation {
  public:
   /**
    * Constructeur par défaut

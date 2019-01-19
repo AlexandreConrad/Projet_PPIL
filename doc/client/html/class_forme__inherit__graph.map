@@ -1,0 +1,9 @@
+<map id="Forme" name="Forme">
+<area shape="rect" id="node1" title=" " alt="" coords="92,5,243,171"/>
+<area shape="rect" id="node2" href="$class_forme_composee.html" title=" " alt="" coords="5,226,156,421"/>
+<area shape="rect" id="node3" href="$class_forme_simple.html" title=" " alt="" coords="180,219,331,428"/>
+<area shape="rect" id="node4" href="$class_cercle.html" title=" " alt="" coords="5,476,156,656"/>
+<area shape="rect" id="node5" href="$class_polygone.html" title=" " alt="" coords="180,491,331,641"/>
+<area shape="rect" id="node7" href="$class_segment.html" title=" " alt="" coords="355,498,505,634"/>
+<area shape="rect" id="node6" href="$class_triangle.html" title=" " alt="" coords="202,704,309,825"/>
+</map>

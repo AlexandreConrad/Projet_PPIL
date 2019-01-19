@@ -4,62 +4,62 @@ project(client-ppil)
 set(CMAKE_CXX_STANDARD 14)
 
 include_directories(.)
-include_directories(chargeurs)
-include_directories(couleurs)
-include_directories(formes)
-include_directories(formes/complexes)
-include_directories(formes/simples)
-include_directories(sauvegardes)
-include_directories(surfaces)
-include_directories(transformations)
-include_directories(vecteurs)
+include_directories(src/chargeurs)
+include_directories(src/couleurs)
+include_directories(src/formes)
+include_directories(src/formes/complexes)
+include_directories(src/formes/simples)
+include_directories(src/sauvegardes)
+include_directories(src/surfaces)
+include_directories(src/transformations)
+include_directories(src/vecteurs)
 
 add_executable(client-ppil
-        chargeurs/ChargeurCercle.cpp
-        chargeurs/ChargeurCercle.h
-        chargeurs/ChargeurForme.h
-        chargeurs/ChargeurFormeComposee.cpp
-        chargeurs/ChargeurFormeComposee.h
-        chargeurs/ChargeurPolygone.cpp
-        chargeurs/ChargeurPolygone.h
-        chargeurs/ChargeurSegment.cpp
-        chargeurs/ChargeurSegment.h
-        couleurs/Couleur.cpp
-        couleurs/Couleur.h
-        formes/complexes/FormeComposee.cpp
-        formes/complexes/FormeComposee.h
-        formes/simples/Cercle.cpp
-        formes/simples/Cercle.h
-        formes/simples/FormeSimple.cpp
-        formes/simples/FormeSimple.h
-        formes/simples/Polygone.cpp
-        formes/simples/Polygone.h
-        formes/simples/Segment.cpp
-        formes/simples/Segment.h
-        formes/simples/Triangle.cpp
-        formes/simples/Triangle.h
-        formes/Forme.cpp
-        formes/Forme.h
-        sauvegardes/Sauvegarde.h
-        sauvegardes/SauvegardeTexte.cpp
-        sauvegardes/SauvegardeTexte.h
-        surfaces/Surface.h
-        surfaces/SurfaceJava.cpp
-        surfaces/SurfaceJava.h
-        transformations/Homothetie.cpp
-        transformations/Homothetie.h
-        transformations/Rotation.cpp
-        transformations/Rotation.h
-        transformations/Transformation.cpp
-        transformations/Transformation.h
-        transformations/Translation.cpp
-        transformations/Translation.h
-        vecteurs/Vecteur2D.cpp
-        vecteurs/Vecteur2D.h
+        src/chargeurs/ChargeurCercle.cpp
+        src/chargeurs/ChargeurCercle.h
+        src/chargeurs/ChargeurForme.h
+        src/chargeurs/ChargeurFormeComposee.cpp
+        src/chargeurs/ChargeurFormeComposee.h
+        src/chargeurs/ChargeurPolygone.cpp
+        src/chargeurs/ChargeurPolygone.h
+        src/chargeurs/ChargeurSegment.cpp
+        src/chargeurs/ChargeurSegment.h
+        src/couleurs/Couleur.cpp
+        src/couleurs/Couleur.h
+        src/formes/complexes/FormeComposee.cpp
+        src/formes/complexes/FormeComposee.h
+        src/formes/simples/Cercle.cpp
+        src/formes/simples/Cercle.h
+        src/formes/simples/FormeSimple.cpp
+        src/formes/simples/FormeSimple.h
+        src/formes/simples/Polygone.cpp
+        src/formes/simples/Polygone.h
+        src/formes/simples/Segment.cpp
+        src/formes/simples/Segment.h
+        src/formes/simples/Triangle.cpp
+        src/formes/simples/Triangle.h
+        src/formes/Forme.cpp
+        src/formes/Forme.h
+        src/sauvegardes/Sauvegarde.h
+        src/sauvegardes/SauvegardeTexte.cpp
+        src/sauvegardes/SauvegardeTexte.h
+        src/surfaces/Surface.h
+        src/surfaces/SurfaceJava.cpp
+        src/surfaces/SurfaceJava.h
+        src/transformations/Homothetie.cpp
+        src/transformations/Homothetie.h
+        src/transformations/Rotation.cpp
+        src/transformations/Rotation.h
+        src/transformations/Transformation.cpp
+        src/transformations/Transformation.h
+        src/transformations/Translation.cpp
+        src/transformations/Translation.h
+        src/vecteurs/Vecteur2D.cpp
+        src/vecteurs/Vecteur2D.h
         CMakeLists.txt
-        main.cpp
-        sockets/Socket.cpp
-        sockets/Socket.h)
+        src/main.cpp
+        src/sockets/Socket.cpp
+        src/sockets/Socket.h)
 
 if (WIN32)
     target_link_libraries(client-ppil wsock32 ws2_32)

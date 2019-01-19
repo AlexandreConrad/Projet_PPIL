@@ -5,7 +5,7 @@
 #include "ChargeurFormeComposee.h"
 #include <iostream>
 #include <regex>
-#include "../formes/complexes/FormeComposee.h"
+#include "formes/complexes/FormeComposee.h"
 
 ChargeurFormeComposee::ChargeurFormeComposee(ChargeurForme *chargeur) {
   _chargeur = chargeur;
