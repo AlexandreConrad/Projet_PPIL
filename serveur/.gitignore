@@ -2,3 +2,8 @@
 bin/
 .settings/
 out/
+classes/
+.classpath
+.project
+serveurPPIL.iml
+.settings
