@@ -6,6 +6,7 @@ import fr.conrad.ppil.serveur.liste_expert.ChargeurForme;
 
 import java.io.BufferedInputStream;
 import java.net.Socket;
+import java.net.SocketException;
 
 /**
  * Client avec Mutli Thread 
@@ -45,26 +46,25 @@ public class ClientProcessor implements Runnable {
 		    byte[] tabByte = new byte[4096];
 		    
 		    /* On lit l'information et on la mets dans "b" , avec stream qui est égale aux nombres de caractère lu */
-            taille = bufferedInputStream.read(tabByte);
-            String messageForme = new String(tabByte, 0, taille);
+			while ( true ) {
+				taille = bufferedInputStream.read(tabByte);
+				String messageForme = new String(tabByte, 0, taille);
 
-            /* On affiche l'information */
-            System.out.println("Reçu : " + messageForme);
+				/* Découpage */
+				String[] messageFormes = messageForme.split(";");
 
-            /* Découpage */
-            String[] messageFormes = messageForme.split(";");
-
-            /* Parcours de chaque information dans le chargeur de forme */
-            for (String message : messageFormes) {
-                System.out.println(message);
-                if (message.length() > 0) {
-                    System.out.println(" > Traité");
-                    Forme forme = _ChargeurForme.traiter(message);
-                    forme.dessiner(_Dessinateur);
-                }
-            }
-			
-			_Socket.close();
+				/* Parcours de chaque information dans le chargeur de forme */
+				for (String message : messageFormes) {
+					System.out.println(message);
+					if (message.length() > 0) {
+						System.out.println(" > Traité");
+						Forme forme = _ChargeurForme.traiter(message);
+						forme.dessiner(_Dessinateur);
+					}
+				}
+			}
+		} catch ( SocketException e ) {
+			System.out.println("Le client s'est déconnecté !");
 		} catch ( Exception e ) {
 			/*Retourner le message d'erreur*/
 			e.printStackTrace();

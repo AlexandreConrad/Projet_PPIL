@@ -9,6 +9,7 @@
 #include <fstream>
 #include <iostream>
 #ifdef _WIN32
+#include <Windows.h>
 #endif
 
 const double PI = 3.141592653;

@@ -56,9 +56,6 @@ public class ChargeurFormeComposee extends ChargeurForme{
 				informationBis = informationBis.substring(1, informationBis.length());
 			}
 			
-			/* Affichage des informations */
-			System.out.println(informationBis);
-			
 			/* On récupere la forme et on l'ajoute à notre liste */
 			Forme provisoireForme = chargeurForme.traiter(informationBis);
 			formes.add(provisoireForme);
