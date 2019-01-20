@@ -1,8 +1,0 @@
-<map id="FormeSimple" name="FormeSimple">
-<area shape="rect" id="node1" title=" " alt="" coords="180,219,331,428"/>
-<area shape="rect" id="node3" href="$class_cercle.html" title=" " alt="" coords="5,476,156,656"/>
-<area shape="rect" id="node4" href="$class_polygone.html" title=" " alt="" coords="180,491,331,641"/>
-<area shape="rect" id="node6" href="$class_segment.html" title=" " alt="" coords="355,498,505,634"/>
-<area shape="rect" id="node2" href="$class_forme.html" title=" " alt="" coords="180,5,331,171"/>
-<area shape="rect" id="node5" href="$class_triangle.html" title=" " alt="" coords="208,704,303,796"/>
-</map>

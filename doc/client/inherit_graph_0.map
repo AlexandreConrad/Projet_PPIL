@@ -1,7 +1,0 @@
-<map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
-<area shape="rect" id="node1" href="$class_chargeur_forme.html" title=" " alt="" coords="5,81,116,108"/>
-<area shape="rect" id="node2" href="$class_chargeur_cercle.html" title=" " alt="" coords="195,5,306,32"/>
-<area shape="rect" id="node3" href="$class_chargeur_forme_composee.html" title=" " alt="" coords="164,56,337,83"/>
-<area shape="rect" id="node4" href="$class_chargeur_polygone.html" title=" " alt="" coords="187,107,315,133"/>
-<area shape="rect" id="node5" href="$class_chargeur_segment.html" title=" " alt="" coords="187,157,314,184"/>
-</map>
